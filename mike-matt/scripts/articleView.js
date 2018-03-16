@@ -5,7 +5,8 @@ let articleView = {};
 // TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
+// Arrow functions create their own "this." context and constructor functions do not.
+//****If it does not rely on the contextual "this" from the constructor function.
 
 articleView.populateFilters = function() {
   $('article').each(function() {
