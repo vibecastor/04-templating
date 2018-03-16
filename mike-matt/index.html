@@ -13,21 +13,21 @@
 
     <script id="article-template" type="text/x-handlebars-template">
       <div>
-        <article class=“template” data-category=“cat”>
+        <article data-category={{category}}>
           <header>
             <h1>{{title}}</h1>
-            <div class=“byline”>
-              By <address><a href=“{{authorURL}}”>{{authorName}}</a></address>
-              published <time pubdate datetime="{{publishedOn}}">Publish Time</time>
+            <div class="byline">
+              By <address><a href="{{authorUrl}}">{{author}}</a></address>
+              published <time pubdate datetime="2000-01-01">{{this.publishStatus}}</time>
             </div>
           </header>
-          <section class=“article-body”>{{articleBody}}</section>
-          <a href=“#” class=“read-on”>Read on &rarr;</a>
+          <section class="article-body">{{{body}}}</section>
+          <a href="#" class="read-on">Read on &rarr;</a>
         </article>
       </div>
     </script>
     <!--
-      TODO: Add a script tag to hold the Handlebars template.
+      DONE: Add a script tag to hold the Handlebars template.
         - Be sure to give it a meaningful id attribute.
         - Move your old template structure to here. Remember that this template needs to have the same structure as the old one!
         - Insert placeholder keys.
