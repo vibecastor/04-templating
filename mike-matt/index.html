@@ -13,12 +13,12 @@
 
     <script id="article-template" type="text/x-handlebars-template">
       <div>
-        <article data-category={{category}}>
+        <article data-author="{{author}}" data-category="{{category}}">
           <header>
             <h1>{{title}}</h1>
             <div class="byline">
               By <address><a href="{{authorUrl}}">{{author}}</a></address>
-              published <time pubdate datetime="2000-01-01">{{this.publishStatus}}</time>
+              <time pubdate datetime="2000-01-01">{{publishStatus}}</time>
             </div>
           </header>
           <section class="article-body">{{{body}}}</section>
